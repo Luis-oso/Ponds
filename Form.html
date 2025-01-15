@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pond Quote Appointment</title>
+    <link rel="stylesheet" href="/Style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Pond Quote Appointment Form</h2>
+        <form action="/submit-appointment" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="appointment-date">Preferred Appointment Date:</label>
+                <input type="date" id="appointment-date" name="appointment_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Preferred Time:</label>
+                <select id="time" name="appointment_time" required>
+                    <option value="">-- Select a Time --</option>
+                    <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                    <option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Additional Details or Questions:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any specific details about your pond or project?"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Schedule Appointment</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
